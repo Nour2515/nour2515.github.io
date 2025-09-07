@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nour Mohamed — Full Stack .NET Developer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent);
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1720;
+      --muted:#9aa6b2;
+      --accent:#6ee7b7;
+      --accent-2:#60a5fa;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#071019 120%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:32px;
+    }
+
+    .container{max-width:1100px;margin:0 auto}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#05202b}
+    .brand h1{margin:0;font-size:18px}
+    .brand p{margin:0;color:var(--muted);font-size:12px}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-bottom:28px}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 6px 30px rgba(2,6,12,0.6);}
+
+    .hero-left h2{margin:0;font-size:28px}
+    .hero-left p{color:var(--muted);margin-top:8px}
+
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;padding:10px 14px;border-radius:10px;color:#05202b;font-weight:700;cursor:pointer}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--muted);cursor:pointer}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;color:var(--muted);font-size:13px}
+
+    /* Sections */
+    section{margin-bottom:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    h3{margin-top:0}
+    p.lead{color:var(--muted)}
+
+    /* Portfolio cards */
+    .proj{display:block;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);}
+    .proj .title{font-weight:700}
+    .proj .meta{color:var(--muted);font-size:13px;margin-top:8px}
+    .proj .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
+
+    /* Competitive advantage */
+    .adv{display:flex;flex-direction:column;gap:12px}
+    .adv .item{display:flex;gap:12px;align-items:flex-start}
+    .adv .dot{width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:120px;resize:vertical}
+    .socials{display:flex;gap:12px;align-items:center}
+    .muted{color:var(--muted)}
+
+    footer{color:var(--muted);text-align:center;padding:20px 0}
+
+    @media (max-width:900px){
+      .hero, .contact-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      nav a{display:none}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+       <div class="profile-pic">
+  <img src="me.jpg" alt="Nour Mohamed">
+</div>
+        <div>
+          <h1>Nour Mohamed</h1>
+          <p>Full Stack .NET Developer</p>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left card">
+        <h2>Hi, I'm <span style="color:var(--accent)">Nour Mohamed</span> — Full Stack .NET Developer</h2>
+        <p class="lead">I build modern web and desktop applications using .NET, delivering clean and scalable code. I work end-to-end from database design to UI/UX implementation.</p>
+
+        <div class="skills">
+          <div class="skill">ASP.NET Core</div>
+          <div class="skill">C#</div>
+          <div class="skill">SQL Server</div>
+          <div class="skill">React / Blazor</div>
+          <div class="skill">WPF / WinForms</div>
+          <div class="skill">Python (Automation)</div>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="#contact">Hire Me</a>
+          <a class="btn-outline" href="https://github.com/Nour2515" target="_blank" rel="noopener">View GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Quick Info</h3>
+        <p class="muted">Competitive advantage</p>
+        <div style="margin-top:10px"> 
+          <strong style="display:block">End-to-end .NET solutions</strong>
+          <p class="muted" style="margin-top:6px">From DB to UI, with clean, maintainable code and fast delivery.</p>
+        </div>
+
+        <div style="margin-top:14px">
+          <p class="muted" style="margin-bottom:8px">Contact</p>
+          <div class="muted">Email: <a href="mailto:nour.mohamed3511@gmail.com" style="color:var(--accent)">nour.mohamed3511@gmail.com</a></div>
+          <div class="muted">GitHub: <a href="https://github.com/Nour2515" target="_blank" style="color:var(--accent)">github.com/Nour2515</a></div>
+          <div class="muted">LinkedIn: <a href="https://www.linkedin.com/in/nour-mohmed-8b1829362" target="_blank" style="color:var(--accent)">linkedin.com/in/nour-mohmed-8b1829362</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="card">
+        <h3>About Me</h3>
+        <p class="lead">I am a passionate Full Stack .NET developer experienced in building scalable web apps, desktop solutions, and APIs. I focus on writing clean, testable code and delivering reliable software that solves real business problems.</p>
+        <div style="margin-top:12px;display:flex;gap:12px">
+          <div class="skill">Years of Experience: 3+</div>
+          <div class="skill">Availability: Freelance / Remote</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="grid-3">
+      <div class="proj card">
+        <h4>Full Stack Web Apps</h4>
+        <div class="meta">ASP.NET Core, React / Blazor, SQL Server</div>
+        <div class="tags"><span class="tag">Web</span><span class="tag">API</span><span class="tag">Responsive</span></div>
+      </div>
+
+      <div class="proj card">
+        <h4>Desktop Applications</h4>
+        <div class="meta">WPF / WinForms, C#</div>
+        <div class="tags"><span class="tag">Desktop</span><span class="tag">Management Systems</span></div>
+      </div>
+
+      <div class="proj card">
+        <h4>Automation & Tools</h4>
+        <div class="meta">Python scripts, automation, scraping</div>
+        <div class="tags"><span class="tag">Automation</span><span class="tag">Data</span></div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <h3 style="margin-bottom:12px">Selected Projects</h3>
+      <div class="grid-2">
+        <a class="proj card" href="#">
+          <div class="title">Library Management System</div>
+          <div class="meta">WinForms / C# • Inventory, Lending, Reports</div>
+          <div class="tags"><span class="tag">WPF</span><span class="tag">C#</span><span class="tag">SQL</span></div>
+        </a>
+
+        <a class="proj card" href="#">
+          <div class="title">E-commerce Web App</div>
+          <div class="meta">ASP.NET Core + React • Product Catalog & Orders</div>
+          <div class="tags"><span class="tag">ASP.NET Core</span><span class="tag">React</span></div>
+        </a>
+
+        <a class="proj card" href="#">
+          <div class="title">Task Automation Script</div>
+          <div class="meta">Python • Data processing automation</div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Automation</span></div>
+        </a>
+
+        <a class="proj card" href="#">
+          <div class="title">Company Internal Portal</div>
+          <div class="meta">ASP.NET Core • Auth, Roles, Dashboard</div>
+          <div class="tags"><span class="tag">Auth</span><span class="tag">Dashboard</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Competitive Advantage -->
+    <section>
+      <div class="card adv">
+        <h3>Competitive Advantage</h3>
+        <div class="item">
+          <div class="dot">1</div>
+          <div>
+            <strong>End-to-end .NET expertise</strong>
+            <div class="muted">I deliver solutions from database design to UI, using clean and maintainable code for long-term stability.</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="dot">2</div>
+          <div>
+            <strong>Fast delivery with high quality</strong>
+            <div class="muted">Single point of contact for both frontend and backend speeds up delivery and reduces miscommunication.</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="dot">3</div>
+          <div>
+            <strong>Flexible & practical solutions</strong>
+            <div class="muted">I adapt to project needs (web, desktop, scripts) and provide solutions that match business goals.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-grid">
+      <div class="card">
+        <h3>Contact Me</h3>
+        <p class="muted">Send a message to discuss your project or get a quote.</p>
+        <form onsubmit="event.preventDefault(); alert('Replace this with real form handling or a mailto link.');">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Reach Out</h3>
+        <p class="muted">Prefer direct contact? Use these links.</p>
+        <div style="margin-top:12px">
+          <div class="muted">Email</div>
+          <a href="mailto:nour.mohamed3511@gmail.com" style="display:block;margin-bottom:10px;color:var(--accent)">nour.mohamed3511@gmail.com</a>
+
+          <div class="muted">GitHub</div>
+          <a href="https://github.com/Nour2515" target="_blank" style="display:block;margin-bottom:10px;color:var(--accent)">github.com/Nour2515</a>
+
+          <div class="muted">LinkedIn</div>
+          <a href="https://www.linkedin.com/in/nour-mohmed-8b1829362" target="_blank" style="display:block;margin-bottom:10px;color:var(--accent)">linkedin.com/in/nour-mohmed-8b1829362</a>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4>Availability</h4>
+          <p class="muted">Open to freelance projects — remote or contract. Typical response time: 24–48 hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Nour Mohamed — Full Stack .NET Developer
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
